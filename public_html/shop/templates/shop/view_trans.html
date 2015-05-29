@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+
+{% block title  %}
+Shopping Cart
+{% endblock title %}
+
+{% block nav %}
+<div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="{% url 'home' %}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="{% url 'view_trans' %}"><span class="glyphicon glyphicon-list-alt"></span> View Transactions</a></li>
+        <li><a href="{% url 'add' %}"><span class="glyphicon glyphicon-plus"></span> add item</a></li>
+        <li><a href="/shop/logout/"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+    </ul>
+</div>
+{% endblock nav %}
+
+
+
+{%  block content %}
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            {% if itemlist  %}
+            <table <table  id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                    <tr >
+
+                        <th class="text-center">
+                            Transaction Id
+                        </th>
+                        <th class="text-center">
+                            Item
+                        </th>
+                        <th class="text-center">
+                            Quantity
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for item in itemlist %}
+                    <tr>
+
+                     {% csrf_token %}
+                     <td class="text-center">{{ item.o_id }} </td>
+                     <td class="text-center">{{ item.o_item }} </td>
+                     <td class="text-center">{{ item.o_quantity}} </td>
+
+                 </tr>
+                 {% endfor %}
+
+             </tbody>
+         </table>
+     </div>
+ </div>
+ {% else %}
+ <p>No transactions  are available.</p>
+ {% endif %}
+
+</div>
+{% endblock content %}

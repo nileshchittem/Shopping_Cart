@@ -1,0 +1,493 @@
+'''def user_is_verified(request):
+    cust_name2=request.user.customer
+    global mess
+    #assert False,cust_name
+    #cust_name2=customer.objects.get(user=cust_name)
+    #assert False,cust_name2.verified
+    if(cust_name2.verified==False):
+        mess="not verified"
+        #assert False,mess
+        return True
+    else:
+        return False'''
+
+
+
+
+'''def redirec(request):
+    global mess
+    context = {'mess':mess}
+    mess=""
+    return render_to_response('shop/redirec.html', context, context_instance = RequestContext(request))'''
+
+'''def index(request):
+    global mess
+    context={'mess':mess}
+    mess=""
+    return render_to_response('shop/index.html', context, context_instance = RequestContext(request))'''
+
+
+'''def home(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    #assert False, request.user.seller
+    try:
+        request.user.seller
+        item_list=item.objects.filter(item_seller=request.user.seller)  
+        #assert False, item_list
+        context = {'item_list': item_list,}
+        return render_to_response('shop/home_seller.html', context, context_instance = RequestContext(request))
+    except:   
+        #assert False, request.user.seller
+        if(request.user.customer.verified==False):
+            global mess
+            mess="not verified"
+            return HttpResponseRedirect('/shop/logout/')
+            
+        item_list=item.objects.filter(item_quantity__gt = 0).order_by('id')
+        global mess
+        context = {'item_list': item_list,}
+        #assert False,mess
+        #return render(request, 'shop/home.html', context)
+        #mess=""
+        return render_to_response('shop/home.html', context, context_instance = RequestContext(request))'''
+
+
+
+
+'''def v_cart(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    if(request.user.customer.verified==False):
+        global mess
+        mess="not verified"
+        return HttpResponseRedirect('/shop/logout/')
+    cust_name=request.user.customer
+    cart_list=cart.objects.filter(c_id=cust_name,typec='c')
+    #assert False,cart_list
+    cost_list=[]
+    totalcost=0
+    for cart2 in cart_list:
+        cost=cart2.pitem_id.item_cost*cart2.pitem_quauntity
+        cost_list.append({
+            'item':cart2.pitem_id,
+            'quantity':cart2.pitem_quauntity,
+            'cost':cost,
+            })
+        totalcost+=cost
+    context =  {'cart_list': cart_list,'cost_list':cost_list,'totalcost':totalcost,}
+    #assert False,context
+    return render_to_response('shop/cart.html', context, context_instance = RequestContext(request))'''
+
+
+
+
+    '''def v_wishlist(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    if(request.user.customer.verified==False):
+        global mess
+        mess="not verified"
+        return HttpResponseRedirect('/shop/logout/')
+    cust_name=request.user.customer
+    cart_list=cart.objects.filter(c_id=cust_name,typec='w')
+    #assert False,cart_list
+    cost_list=[]
+    totalcost=0
+    for cart2 in cart_list:
+        cost=cart2.pitem_id.item_cost*cart2.pitem_quauntity
+        cost_list.append({
+            'item':cart2.pitem_id,
+            'quantity':cart2.pitem_quauntity,
+            'cost':cost,
+            })
+        totalcost+=cost
+    context =  {'cart_list': cart_list,'cost_list':cost_list,'totalcost':totalcost,}
+    #assert False,context
+    return render_to_response('shop/wishlist.html', context, context_instance = RequestContext(request))'''
+
+
+
+    '''def checkout(request):
+    #assert False,request.POST['cost_list']
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    if(request.user.customer.verified==False):
+        global mess
+        mess="not verified"
+        return HttpResponseRedirect('/shop/logout/')
+    #assert False,request.POST['total']
+    a=request.POST['total']
+    context={}
+    global mess
+    t=transaction(t_cost=a)
+    #assert False,t.t_date
+    t.t_id=request.user.customer
+    cart_list=cart.objects.filter(c_id=request.user.customer,typec='c')
+    t.save()
+    #assert False,t
+    for items in cart_list:
+        #assert False,items
+        it=items.pitem_id
+        it.item_quantity-=items.pitem_quauntity
+        it.save()
+        #assert False,it.item_quantity
+        o=order(o_id=t,o_item=items.pitem_id,o_quantity=items.pitem_quauntity)
+        o.save()
+    cart.objects.filter(c_id=request.user.customer,typec='c').delete()
+    #return home(request)
+    mess="successfully checked out"
+    return HttpResponseRedirect('/shop/redirec/')
+    #return render_to_response('shop/redirec.html', context, context_instance = RequestContext(request))
+
+
+'''
+
+
+'''def update_cart(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    if(request.user.customer.verified==False):
+        global mess
+        mess="not verified"
+        return HttpResponseRedirect('/shop/logout/')
+    cart_list=cart.objects.filter(c_id=request.user.customer,typec='c')
+    cost_list=[]
+    totalcost=0
+    for cart2 in cart_list:
+        cost=cart2.pitem_id.item_cost*cart2.pitem_quauntity
+        cost_list.append({
+            'item':cart2.pitem_id,
+            'quantity':cart2.pitem_quauntity,
+            'cost':cost,
+            })
+        totalcost+=cost
+    context =  {'cart_list': cart_list,'cost_list':cost_list,'totalcost':totalcost,}
+    return render_to_response('shop/update_cart.html', context, context_instance = RequestContext(request))'''
+
+
+
+    '''def update_wishlist(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    if(request.user.customer.verified==False):
+        global mess
+        mess="not verified"
+        return HttpResponseRedirect('/shop/logout/')
+    cart_list=cart.objects.filter(c_id=request.user.customer,typec='w')
+    cost_list=[]
+    totalcost=0
+    for cart2 in cart_list:
+        cost=cart2.pitem_id.item_cost*cart2.pitem_quauntity
+        cost_list.append({
+            'item':cart2.pitem_id,
+            'quantity':cart2.pitem_quauntity,
+            'cost':cost,
+            })
+        totalcost+=cost
+    context =  {'cart_list': cart_list,'cost_list':cost_list,'totalcost':totalcost,}
+    return render_to_response('shop/update_wishlist.html', context, context_instance = RequestContext(request))'''
+
+
+    '''def updated_cart(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    if(request.user.customer.verified==False):
+        global mess
+        mess="not verified"
+        return HttpResponseRedirect('/shop/logout/')
+    item_list=item.objects.get(item_name=request.POST['itemx'])
+    cart_list=cart.objects.get(c_id=request.user.customer,typec='c',pitem_id=item_list)
+    cart_list.pitem_quauntity=int(request.POST['q'])
+    cart_list.save()
+    ''''''cart_list=cart.objects.filter(c_id=request.user.customer,typec='c',pitem_id=z)
+    assert False,cart_list
+    for cart2 in cart_list:
+        b=cart2.pitem_id.item_name
+        x=request.POST[b]
+        y=cart2.pitem_quauntity-int(x)
+        cart_item=cart.objects.get(pitem_id=cart2.pitem_id,c_id=request.user.customer,typec='c')
+        #assert False,cart_item
+        cart_item.c_id=request.user.customer
+        cart_item.pitem_quauntity=x
+        cart_item.pitem_id.item_quantity+=y
+        cart_item.save1()
+    #assert False,cart_item'''
+    
+    '''return v_cart(request)'''
+
+
+'''def updated_wishlist(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    if(request.user.customer.verified==False):
+        global mess
+        mess="not verified"
+        return HttpResponseRedirect('/shop/logout/')
+
+    item_list=item.objects.get(item_name=request.POST['itemx'])
+    cart_list=cart.objects.get(c_id=request.user.customer,typec='w',pitem_id=item_list)
+    cart_list.pitem_quauntity=int(request.POST['q'])
+    cart_list.save()
+    #lists=item.objects.get()
+
+    #assert False,cart_list
+    '''''''for cart2 in cart_list:
+        b=cart2.pitem_id.item_name
+        x=request.POST[b]
+        y=cart2.pitem_quauntity-int(x)
+        cart_item=cart.objects.get(pitem_id=cart2.pitem_id,c_id=request.user.customer,typec='w')
+        #assert False,cart_item
+        cart_item.c_id=request.user.customer
+        cart_item.pitem_quauntity=x
+        cart_item.pitem_id.item_quantity+=y
+        cart_item.save()'''''''
+    #assert False,cart_item
+    
+    return v_wishlist(request)'''
+
+
+'''def add_to_cart(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    if(request.user.customer.verified==False):
+        global mess
+        mess="not verified"
+        return HttpResponseRedirect('/shop/logout/')
+    # A HTTP POST?
+    # item_list=item.objects.filter(item_quantity__gt = 0).order_by('id')
+    context = {}
+    if request.method == 'POST':
+        form = CartForm(request.POST)
+
+        # Have we been provided with a valid form?
+        if form.is_valid():
+            # Save the new category to the database.
+            # assert False, form.cleaned_data
+            #assert False,request.POST['flag']
+            typecq="c"
+            if request.POST['submit']=="cart":
+                typecq="c"
+            elif request.POST['submit']=="wishlist":
+                typecq="w"
+            
+            cart_item = cart.objects.get_or_create(
+                pitem_id=form.cleaned_data['pitem_id'],c_id=request.user.customer,typec=typecq)
+            
+            cart_item[0].c_id=request.user.customer
+            cart_item[0].pitem_quauntity += form.cleaned_data['pitem_quauntity']
+            cart_item[0].typec=typecq
+            #assert False,cart_item[0].pitem_id.item_quantity
+            global mess 
+        
+            if(typecq=="c"):
+                cart_item[0].save()
+                mess="successfully added to cart"
+                try:
+                    if(request.POST['flag']=="1"):
+                        cart.objects.filter(pitem_id=form.cleaned_data['pitem_id'],c_id=request.user.customer,typec='w').delete()
+                except:
+                    pass
+            elif(typecq=="w"):
+                cart_item[0].save()
+                mess="successfully added to wishlist"
+            # form.save(commit=True)
+            
+            # Now call the home() view.
+            # The user will be shown the homepage.
+            return HttpResponseRedirect('/shop/redirec/')
+        else:
+            # The supplied form contained errors - just print them to the terminal.
+            print form.errors
+    else:
+        # If the request was not a POST, display the form to enter details.
+        form = CartForm()
+    context['form'] = form
+    # Bad form (or form details), no form supplied...
+    # Render the form with error messages (if any).
+    return render_to_response('shop/add_to_cart.html', context, context_instance = RequestContext(request))
+
+'''
+
+
+
+'''def register(request):
+
+    registered = False
+
+    if request.method == 'POST':
+        user_form = UserForm(data=request.POST)
+        profile_form = UserProfileForm(data=request.POST)
+       
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save()
+
+            user.set_password(user.cleaned_data['password'])
+
+            user.save()
+
+            profile = profile_form.save(commit=False)
+            profile.user = user
+
+            profile.verified=False
+            profile.save()
+            registered = True
+
+        else:
+            print user_form.errors, profile_form.errors
+
+    else:
+        user_form = UserForm()
+        profile_form = UserProfileForm()
+
+    return render(request,
+            'shop/register.html',
+            {'user_form': user_form, 'profile_form': profile_form, 'registered': registered} )'''
+
+
+'''def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            new_user = form.save()
+            cust = customer.objects.get_or_create(user=new_user)
+            #user=User.objects.get(username=new_user.username)
+            #assert False, cust[0].verified
+            cust[0].save()
+            return HttpResponseRedirect("/shop/home")
+    else:
+        form = UserCreationForm()
+    return render(request, "shop/register.html", {'form': form,})'''
+
+'''def add(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    context = {}
+    if request.method == 'POST':
+        form = AddForm(data=request.POST)
+
+        if form.is_valid():
+            item_add=item(item_name=form.cleaned_data['item_name'],item_cost=form.cleaned_data['item_cost'],
+                item_discount=form.cleaned_data['item_discount'],item_quantity=form.cleaned_data['item_quantity'],
+                item_description=form.cleaned_data['item_description'],item_seller=request.user.seller)
+            item_add.save()
+            #assert False,item_add
+            global mess
+            mess="item added"
+            return HttpResponseRedirect("/shop/redirec")
+
+    else:
+        form=AddForm()
+    return render(request,'shop/add.html',{'form': form,} )'''
+
+
+'''def delete(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    item_id=request.POST['pitem_id']
+    #assert False,item_id
+    item.objects.get(id=item_id).delete()
+    context={}
+    global mess
+    mess="item deleted"
+    return HttpResponseRedirect("/shop/redirec")
+    #return render_to_response('shop/home_seller.html', context, context_instance = RequestContext(request))'''
+
+
+    '''def update(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    #assert False,request.POST['submit']
+    if request.method == 'POST' and request.POST['submit']=="update":
+        item_update=item.objects.get(id=request.POST['item_id'])
+        item_update.item_name=request.POST['item_name']
+        item_update.item_cost=request.POST['item_cost']
+        item_update.item_discount=request.POST['item_discount']
+        item_update.item_description=request.POST['item_description']
+        item_update.item_quantity=request.POST['item_quantity']
+        item_update.save()
+        global mess
+        mess="item updated"
+        return HttpResponseRedirect("/shop/redirec")
+    else:
+        item_id=request.POST['pitem_id']
+        #assert False,item_id
+        item_update=item.objects.get(id=item_id)
+        context={'item':item_update}
+        return render_to_response('shop/update.html', context, context_instance = RequestContext(request))'''
+
+
+    '''def v_trans(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/shop')
+    item_list=item.objects.filter(item_seller=request.user.seller)
+    #assert False,item_list
+    orderlist=[]
+    for items in item_list:
+        order_list=order.objects.filter(o_item=items)
+        for orders in order_list:
+            orderlist.append(orders)
+    #assert False,order_list
+    context={'itemlist':orderlist}
+    #assert False,context
+    return render_to_response('shop/view_trans.html', context, context_instance = RequestContext(request))'''
+
+    '''def register_user(request):
+    args = {}
+    args.update(csrf(request))
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        args['form'] = form
+        if form.is_valid(): 
+            form.save()  # save user to database if form is valid
+            
+            username = form.cleaned_data['username']
+            email = form.cleaned_data['email']
+            salt = hashlib.sha1(str(random.random())).hexdigest()[:5]            
+            activation_key = hashlib.sha1(salt+email).hexdigest()            
+            key_expires = datetime.datetime.today() + datetime.timedelta(2)
+
+            #Get user by username
+            user=User.objects.get(username=username)
+
+            # Create and save user profile                                                                                                                                  
+            new_profile = UserProfile(user=user, activation_key=activation_key, 
+                key_expires=key_expires)
+            new_profile.save()
+
+            # Send email with activation key
+            email_subject = 'Account confirmation'
+            email_body = "Hey %s, thanks for signing up. To activate your account, click this link within \
+            48hours http://127.0.0.1:8000/shop/confirm/%s" % (username, activation_key)
+
+            send_mail(email_subject, email_body, 'myemail@example.com',
+                [email], fail_silently=False)
+            global mess
+            mess="Registration Successfull"
+            return HttpResponseRedirect('/shop/')
+    else:
+        args['form'] = RegistrationForm()
+
+    return render_to_response('shop/register.html', args, context_instance=RequestContext(request))'''
+
+
+
+    '''def register_confirm(request, activation_key):
+    #check if user is already logged in and if he is redirect him to some other url, e.g. home
+    if request.user.is_authenticated():
+        HttpResponseRedirect('shop/home')
+
+    # check if there is UserProfile which matches the activation key (if not then display 404)
+    user_profile = get_object_or_404(UserProfile, activation_key=activation_key)
+    global mess
+    #check if the activation key has expired, if it hase then render confirm_expired.html
+    if user_profile.key_expires < timezone.now():
+        mess="confirmation ID expired"
+        return render_to_response('/shop/')
+    #if the key hasn't expired save user and set him as active and render some template to confirm activation
+    user = user_profile.user
+    user.is_active = True
+    user.save()
+    mess="Thank You ,Your Account is Activated"
+    return HttpResponseRedirect('/shop/home')
+    return render_to_response('shop/confirm.html')'''

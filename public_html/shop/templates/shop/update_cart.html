@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+{% block title  %}
+	 Update_Cart
+{% endblock title %}
+
+
+{%  block content %}
+<h1> Update_Cart</h1>
+<p style="text-align:center;"><a href="{% url 'cart' %}">Cart</a></p>
+<p style="text-align:center;"><a href="{% url 'wishlist' %}">Wishlist</a></p>
+{% if cart_list  %}
+    <table border="1">
+    <tr>
+    	<th>Product_Name</th>
+    	<th>Quantity</th>
+    </tr>
+    
+   	<form action="{% url 'updated_cart' %}" method="POST">
+   	{% csrf_token %}
+    {% for cartx in cost_list %}
+    	 <tr>
+       	<td>{{cartx.item}}</td>
+
+       	<td><input type="number" name ="{{cartx.item}}" value="{{cartx.quantity}}"></td>
+
+        </tr>
+    {% endfor %}
+	
+    </table>
+        <input type="submit" value="UpdateCart">
+    </form>
+{% else %}
+    <p>cart is empty.</p>
+{% endif %}
+    <a href="{% url 'home' %}">go back</a>
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block title  %}
+Create an Account
+{% endblock title %}
+
+
+{%  block content %}
+<div class = "container">
+    <div class="wrapper">
+            <form action="/shop/register/" method="post" name="Login_Form" class="form-signin">       
+            <h3 class="form-signin-heading" style="color:#48649F; font-family:Garamond; letter-spacing:5px; font-size:45px;">Shopping Cart</h3>
+            {% csrf_token %}
+   
+    <div class="fieldWrapper">
+        
+        {{ form.first_name|bootstrap }}
+    </div>    
+    
+    <div class="fieldWrapper">
+        
+        {{ form.last_name|bootstrap }}
+    </div>    
+    
+    <div class="fieldWrapper">    
+        {{ form.email.errors }}            
+        
+        {{ form.email|bootstrap }}
+    </div>    
+    
+    <div class="fieldWrapper">
+    {{form.errors.values.0}}                
+        
+        {{ form.username|bootstrap }}
+    </div>
+    
+    <div class="fieldWrapper">        
+        {{form.errors.values.1}}            
+                          
+        {{ form.password1|bootstrap }}
+    </div>
+    
+    <div class="fieldWrapper">           
+        
+        {{ form.password2|bootstrap }}
+    </div>            
+    
+    <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Register" type="Submit">Register</button> 
+    <br>
+    <p class="text-center">
+                <a href="/shop/login/">Already Registered, Login Here</a>   
+            </p>
+</form>
+</div> 
+</div>
+
+{% endblock %}

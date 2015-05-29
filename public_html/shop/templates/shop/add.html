@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block title  %}
+    add Item
+{% endblock title %}
+
+{% block nav %}
+<div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'home' %}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="{% url 'view_trans' %}"><span class="glyphicon glyphicon-list-alt"></span> View Transactions</a></li>
+        <li><a href="{% url 'add' %}"><span class="glyphicon glyphicon-plus"></span> add item</a></li>
+        <li><a href="/shop/logout/"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+    </ul>
+</div>
+{% endblock nav %}
+
+
+{%  block content %}
+<div class="container">
+<form action="{{ action }}" method="POST" class="form-horizontal">
+  {% csrf_token %}
+  {{form|bootstrap_horizontal}}
+  <button type="submit" class="pull-right btn btn-default" name='submit' value="submit" >Add Item</button>
+  
+</form>
+ </div>
+{% endblock content %}

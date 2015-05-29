@@ -1,0 +1,171 @@
+[Thu May 21 20:23:52.863102 2015] [wsgi:error] [pid 29641] [client 127.0.0.1:49786] mod_wsgi (pid=29641, process='', application='localhost|'): Failed to parse WSGI script file '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:23:52.863255 2015] [wsgi:error] [pid 29641] [client 127.0.0.1:49786] mod_wsgi (pid=29641): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:23:52.863437 2015] [wsgi:error] [pid 29641] [client 127.0.0.1:49786]   File "/var/www/cart.com/public_html/apache/django.wsgi", line 14
+[Thu May 21 20:23:52.863626 2015] [wsgi:error] [pid 29641] [client 127.0.0.1:49786]     ~
+[Thu May 21 20:23:52.863652 2015] [wsgi:error] [pid 29641] [client 127.0.0.1:49786]                                                             ^
+[Thu May 21 20:23:52.863678 2015] [wsgi:error] [pid 29641] [client 127.0.0.1:49786] SyntaxError: invalid syntax
+[Thu May 21 20:23:54.819669 2015] [wsgi:error] [pid 29643] [client 127.0.0.1:49787] mod_wsgi (pid=29643, process='', application='localhost|'): Failed to parse WSGI script file '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:23:54.819754 2015] [wsgi:error] [pid 29643] [client 127.0.0.1:49787] mod_wsgi (pid=29643): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:23:54.819893 2015] [wsgi:error] [pid 29643] [client 127.0.0.1:49787]   File "/var/www/cart.com/public_html/apache/django.wsgi", line 14
+[Thu May 21 20:23:54.819910 2015] [wsgi:error] [pid 29643] [client 127.0.0.1:49787]     ~
+[Thu May 21 20:23:54.819917 2015] [wsgi:error] [pid 29643] [client 127.0.0.1:49787]                                                             ^
+[Thu May 21 20:23:54.819926 2015] [wsgi:error] [pid 29643] [client 127.0.0.1:49787] SyntaxError: invalid syntax
+[Thu May 21 20:23:57.528938 2015] [wsgi:error] [pid 29644] [client 127.0.0.1:49788] mod_wsgi (pid=29644, process='', application='localhost|'): Failed to parse WSGI script file '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:23:57.528988 2015] [wsgi:error] [pid 29644] [client 127.0.0.1:49788] mod_wsgi (pid=29644): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:23:57.529068 2015] [wsgi:error] [pid 29644] [client 127.0.0.1:49788]   File "/var/www/cart.com/public_html/apache/django.wsgi", line 14
+[Thu May 21 20:23:57.529080 2015] [wsgi:error] [pid 29644] [client 127.0.0.1:49788]     ~
+[Thu May 21 20:23:57.529088 2015] [wsgi:error] [pid 29644] [client 127.0.0.1:49788]                                                             ^
+[Thu May 21 20:23:57.529096 2015] [wsgi:error] [pid 29644] [client 127.0.0.1:49788] SyntaxError: invalid syntax
+[Thu May 21 20:24:02.291084 2015] [wsgi:error] [pid 29642] [client 127.0.0.1:49789] mod_wsgi (pid=29642, process='', application='localhost|'): Failed to parse WSGI script file '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:24:02.291127 2015] [wsgi:error] [pid 29642] [client 127.0.0.1:49789] mod_wsgi (pid=29642): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:24:02.291189 2015] [wsgi:error] [pid 29642] [client 127.0.0.1:49789]   File "/var/www/cart.com/public_html/apache/django.wsgi", line 14
+[Thu May 21 20:24:02.291200 2015] [wsgi:error] [pid 29642] [client 127.0.0.1:49789]     ~
+[Thu May 21 20:24:02.291208 2015] [wsgi:error] [pid 29642] [client 127.0.0.1:49789]                                                             ^
+[Thu May 21 20:24:02.291215 2015] [wsgi:error] [pid 29642] [client 127.0.0.1:49789] SyntaxError: invalid syntax
+[Thu May 21 20:25:02.779266 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790] mod_wsgi (pid=29704): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:25:02.779360 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790] Traceback (most recent call last):
+[Thu May 21 20:25:02.779398 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 170, in __call__
+[Thu May 21 20:25:02.797330 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]     self.load_middleware()
+[Thu May 21 20:25:02.797397 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 49, in load_middleware
+[Thu May 21 20:25:02.800440 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Thu May 21 20:25:02.800666 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 48, in __getattr__
+[Thu May 21 20:25:02.813237 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]     self._setup(name)
+[Thu May 21 20:25:02.813284 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 44, in _setup
+[Thu May 21 20:25:02.813331 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]     self._wrapped = Settings(settings_module)
+[Thu May 21 20:25:02.813350 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 92, in __init__
+[Thu May 21 20:25:02.813374 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Thu May 21 20:25:02.813393 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Thu May 21 20:25:02.823332 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790]     __import__(name)
+[Thu May 21 20:25:02.823475 2015] [wsgi:error] [pid 29704] [client 127.0.0.1:49790] ImportError: No module named assessment_engine.settings
+[Thu May 21 20:25:06.682291 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791] mod_wsgi (pid=29705): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:25:06.682400 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791] Traceback (most recent call last):
+[Thu May 21 20:25:06.682437 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 170, in __call__
+[Thu May 21 20:25:06.682596 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]     self.load_middleware()
+[Thu May 21 20:25:06.682619 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 49, in load_middleware
+[Thu May 21 20:25:06.682741 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Thu May 21 20:25:06.682764 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 48, in __getattr__
+[Thu May 21 20:25:06.682850 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]     self._setup(name)
+[Thu May 21 20:25:06.682892 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 44, in _setup
+[Thu May 21 20:25:06.682922 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]     self._wrapped = Settings(settings_module)
+[Thu May 21 20:25:06.682938 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 92, in __init__
+[Thu May 21 20:25:06.682960 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Thu May 21 20:25:06.682977 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Thu May 21 20:25:06.683038 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791]     __import__(name)
+[Thu May 21 20:25:06.683072 2015] [wsgi:error] [pid 29705] [client 127.0.0.1:49791] ImportError: No module named assessment_engine.settings
+[Thu May 21 20:30:30.682363 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824] mod_wsgi (pid=30004): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:30:30.682438 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824] Traceback (most recent call last):
+[Thu May 21 20:30:30.682474 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+[Thu May 21 20:30:30.682634 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     response = self.get_response(request)
+[Thu May 21 20:30:30.682660 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 218, in get_response
+[Thu May 21 20:30:30.682798 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+[Thu May 21 20:30:30.682822 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 261, in handle_uncaught_exception
+[Thu May 21 20:30:30.682854 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return debug.technical_500_response(request, *exc_info)
+[Thu May 21 20:30:30.682875 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 97, in technical_500_response
+[Thu May 21 20:30:30.698326 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     html = reporter.get_traceback_html()
+[Thu May 21 20:30:30.698389 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+[Thu May 21 20:30:30.698442 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return t.render(c)
+[Thu May 21 20:30:30.698464 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+[Thu May 21 20:30:30.710995 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return self._render(context)
+[Thu May 21 20:30:30.711169 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+[Thu May 21 20:30:30.711249 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return self.nodelist.render(context)
+[Thu May 21 20:30:30.711288 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+[Thu May 21 20:30:30.711333 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     bit = self.render_node(node, context)
+[Thu May 21 20:30:30.711367 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+[Thu May 21 20:30:30.713335 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return node.render(context)
+[Thu May 21 20:30:30.713384 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 89, in render
+[Thu May 21 20:30:30.713431 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     output = self.filter_expression.resolve(context)
+[Thu May 21 20:30:30.713450 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 674, in resolve
+[Thu May 21 20:30:30.713476 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     new_obj = func(obj, *arg_vals)
+[Thu May 21 20:30:30.713495 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/template/defaultfilters.py", line 774, in date
+[Thu May 21 20:30:30.715087 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return format(value, arg)
+[Thu May 21 20:30:30.715128 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/dateformat.py", line 345, in format
+[Thu May 21 20:30:30.727712 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return df.format(format_string)
+[Thu May 21 20:30:30.728073 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/dateformat.py", line 37, in format
+[Thu May 21 20:30:30.728838 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     pieces.append(force_text(getattr(self, piece)()))
+[Thu May 21 20:30:30.728898 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/dateformat.py", line 270, in r
+[Thu May 21 20:30:30.728930 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return self.format('D, j M Y H:i:s O')
+[Thu May 21 20:30:30.728948 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/dateformat.py", line 37, in format
+[Thu May 21 20:30:30.728970 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     pieces.append(force_text(getattr(self, piece)()))
+[Thu May 21 20:30:30.728987 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/encoding.py", line 92, in force_text
+[Thu May 21 20:30:30.730293 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     s = six.text_type(s)
+[Thu May 21 20:30:30.730413 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 141, in __text_cast
+[Thu May 21 20:30:30.731612 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return func(*self.__args, **self.__kw)
+[Thu May 21 20:30:30.731665 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 84, in ugettext
+[Thu May 21 20:30:30.734377 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return _trans.ugettext(message)
+[Thu May 21 20:30:30.734420 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 327, in ugettext
+[Thu May 21 20:30:30.737095 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     return do_translate(message, 'ugettext')
+[Thu May 21 20:30:30.737176 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 304, in do_translate
+[Thu May 21 20:30:30.737243 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     _default = _default or translation(settings.LANGUAGE_CODE)
+[Thu May 21 20:30:30.737264 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 206, in translation
+[Thu May 21 20:30:30.737290 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     _translations[language] = DjangoTranslation(language)
+[Thu May 21 20:30:30.737309 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 116, in __init__
+[Thu May 21 20:30:30.737340 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     self._add_installed_apps_translations()
+[Thu May 21 20:30:30.737376 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 164, in _add_installed_apps_translations
+[Thu May 21 20:30:30.737424 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824]     "The translation infrastructure cannot be initialized before the "
+[Thu May 21 20:30:30.737505 2015] [wsgi:error] [pid 30004] [client 127.0.0.1:49824] AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[Thu May 21 20:30:57.020306 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826] mod_wsgi (pid=30040): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:30:57.020397 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826] Traceback (most recent call last):
+[Thu May 21 20:30:57.020435 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 170, in __call__
+[Thu May 21 20:30:57.020608 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]     self.load_middleware()
+[Thu May 21 20:30:57.020658 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 49, in load_middleware
+[Thu May 21 20:30:57.020793 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Thu May 21 20:30:57.020816 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 48, in __getattr__
+[Thu May 21 20:30:57.020913 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]     self._setup(name)
+[Thu May 21 20:30:57.020935 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 44, in _setup
+[Thu May 21 20:30:57.020964 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]     self._wrapped = Settings(settings_module)
+[Thu May 21 20:30:57.020981 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]   File "/usr/local/lib/python2.7/dist-packages/django/conf/__init__.py", line 92, in __init__
+[Thu May 21 20:30:57.021005 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Thu May 21 20:30:57.021023 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+[Thu May 21 20:30:57.021083 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826]     __import__(name)
+[Thu May 21 20:30:57.021119 2015] [wsgi:error] [pid 30040] [client 127.0.0.1:49826] ImportError: No module named settings
+[Thu May 21 20:34:33.185859 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877] mod_wsgi (pid=30126): Exception occurred processing WSGI script '/var/www/cart.com/public_html/apache/django.wsgi'.
+[Thu May 21 20:34:33.185930 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877] Traceback (most recent call last):
+[Thu May 21 20:34:33.185960 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+[Thu May 21 20:34:33.186093 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     response = self.get_response(request)
+[Thu May 21 20:34:33.186115 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 218, in get_response
+[Thu May 21 20:34:33.186231 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+[Thu May 21 20:34:33.186252 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 261, in handle_uncaught_exception
+[Thu May 21 20:34:33.186280 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return debug.technical_500_response(request, *exc_info)
+[Thu May 21 20:34:33.186298 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 97, in technical_500_response
+[Thu May 21 20:34:33.186604 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     html = reporter.get_traceback_html()
+[Thu May 21 20:34:33.186626 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+[Thu May 21 20:34:33.186690 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return t.render(c)
+[Thu May 21 20:34:33.186724 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+[Thu May 21 20:34:33.187066 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return self._render(context)
+[Thu May 21 20:34:33.187088 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+[Thu May 21 20:34:33.187091 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return self.nodelist.render(context)
+[Thu May 21 20:34:33.187139 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+[Thu May 21 20:34:33.187166 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     bit = self.render_node(node, context)
+[Thu May 21 20:34:33.187183 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+[Thu May 21 20:34:33.187254 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return node.render(context)
+[Thu May 21 20:34:33.187274 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 89, in render
+[Thu May 21 20:34:33.187298 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     output = self.filter_expression.resolve(context)
+[Thu May 21 20:34:33.187315 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 674, in resolve
+[Thu May 21 20:34:33.187336 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     new_obj = func(obj, *arg_vals)
+[Thu May 21 20:34:33.187353 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/template/defaultfilters.py", line 774, in date
+[Thu May 21 20:34:33.187571 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return format(value, arg)
+[Thu May 21 20:34:33.187613 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/dateformat.py", line 345, in format
+[Thu May 21 20:34:33.187737 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return df.format(format_string)
+[Thu May 21 20:34:33.187757 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/dateformat.py", line 37, in format
+[Thu May 21 20:34:33.187782 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     pieces.append(force_text(getattr(self, piece)()))
+[Thu May 21 20:34:33.187794 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/dateformat.py", line 270, in r
+[Thu May 21 20:34:33.187843 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return self.format('D, j M Y H:i:s O')
+[Thu May 21 20:34:33.187860 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/dateformat.py", line 37, in format
+[Thu May 21 20:34:33.187883 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     pieces.append(force_text(getattr(self, piece)()))
+[Thu May 21 20:34:33.187900 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/encoding.py", line 92, in force_text
+[Thu May 21 20:34:33.188008 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     s = six.text_type(s)
+[Thu May 21 20:34:33.188030 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 141, in __text_cast
+[Thu May 21 20:34:33.188243 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return func(*self.__args, **self.__kw)
+[Thu May 21 20:34:33.188277 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/__init__.py", line 84, in ugettext
+[Thu May 21 20:34:33.188383 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return _trans.ugettext(message)
+[Thu May 21 20:34:33.188403 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 327, in ugettext
+[Thu May 21 20:34:33.188638 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     return do_translate(message, 'ugettext')
+[Thu May 21 20:34:33.188660 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 304, in do_translate
+[Thu May 21 20:34:33.188686 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     _default = _default or translation(settings.LANGUAGE_CODE)
+[Thu May 21 20:34:33.188702 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 206, in translation
+[Thu May 21 20:34:33.188724 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     _translations[language] = DjangoTranslation(language)
+[Thu May 21 20:34:33.188740 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 116, in __init__
+[Thu May 21 20:34:33.188761 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     self._add_installed_apps_translations()
+[Thu May 21 20:34:33.188780 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 164, in _add_installed_apps_translations
+[Thu May 21 20:34:33.188802 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     "The translation infrastructure cannot be initialized before the "
+[Thu May 21 20:34:33.188835 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877] AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.

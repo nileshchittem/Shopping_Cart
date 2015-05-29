@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+  
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+
+
+<script type="text/javascript" charset="utf-8">
+            $(document).ready(function() {
+                $('#example').DataTable();
+            } );
+        </script>
+
+
+    {%block redir%}
+
+    {%endblock%}
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+<body>
+{%if user.username%}
+    <header class="navbar">
+        <div class="container-fluid" style="border-bottom:2px solid #ddd">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'home'%}">Shopping Cart</a>
+            </div>
+            
+
+            {% block nav%}
+            {% endblock nav%}
+{%endif%}
+        </div>
+    </header>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {%if user.username%}
+    <footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid" style="padding-top: 10px;">
+        <p style="color: #fff">
+      <span style="text-align:left;float:left">© 2015 </span>
+      <span  style="text-align:right;float:right"><a href="#" alt="Shoping Cart">Shopping Cart</a></span>
+    </p>
+    </div>
+    </footer>
+    {%endif%}
+</body>
+</html> 

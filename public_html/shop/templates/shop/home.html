@@ -1,0 +1,136 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block title  %}
+Shopping Cart
+{% endblock title %}
+
+
+
+
+
+{% block nav %}
+   <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'home' %}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="{% url 'cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    <li><a href="{% url 'wishlist' %}"><span class="glyphicon glyphicon-heart"></span> Wishlist</a></li>
+                    <li><a href="/shop/logout/"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+                </ul>
+            </div>
+{% endblock nav %}
+
+{%  block content %}
+<!--<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Shopping Cart</a>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar">
+  <ul class="nav navbar-nav navbar-right">
+      <li><a href="{% url 'cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      <li><a href="{% url 'wishlist' %}"><span class="glyphicon glyphicon-heart"></span> Wishlist</a></li>
+      <li><a href="/shop/logout/"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+  </ul>
+</div>
+</div>
+</nav>-->
+
+<div class="container">
+
+            
+            
+<!--<a href="#" id="username" data-type="text" data-placement="right" data-title="Enter username">superuser</a>-->
+
+  <h1 >Welcome {{user.username}}</h1>
+  {% if item_list  %}
+  {% for item in item_list %}
+
+  <div class="col-md-2 column productbox">
+    <img src="http://placehold.it/460x250/e67e22/ffffff&text={{ item.item_name }}" class="img-responsive">
+    <div class="producttitle">{{ item.item_description }}</div>
+    <div class="">Discount: Rs.{{ item.item_discount }}</div>
+    <div class="productprice">
+      <div class="pull-right">
+      <a href="#" class="btn btn-danger btn-sm "  data-toggle="modal" data-target="#{{item}}">Add</a>
+      </div>
+      <div class="pricetext">
+        Rs.{{ item.item_cost }}
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="{{item}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">{{ item.item_name }}</h4>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'add_to_cart' %}" method="POST" class="form">
+            {% csrf_token %}
+            Quantity:
+            <input type="hidden" name="pitem_id" value="{{item.id}}">
+            <input type="number" name="pitem_quauntity" min="1" max="10" value=1>&nbsp&nbsp&nbsp&nbsp
+            <button type="submit" class="btn" name='submit' value="wishlist" ><span class="glyphicon glyphicon-heart">&nbspAdd to </br>&nbsp&nbspWishlist</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" name='submit' value="cart" >ADD TO CART</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <!--<table  class ="table table-condensed">
+    <tr>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Disccount</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    {% for item in item_list %}
+    <tr>
+        {% csrf_token %}
+        <td>{{ item.item_name }} </td>
+        <td>{{ item.item_cost }} </td>
+        <td>{{ item.item_discount }} </td>
+        <td>{{ item.item_description }} </td>
+        <td>
+            <form action="{% url 'add_to_cart' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="pitem_id" value="{{item.id}}">
+                <input type="hidden" name="typec" value="c">
+                <input type="number" name="pitem_quauntity" value=1>
+                <input type="submit" value="add to cart">
+            </form>
+        </td>
+        <td>
+            <form action="{% url 'add_to_cart' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="pitem_id" value="{{item.id}}">
+                <input type="hidden" name="typec" value="w">
+                <input type="number" name="pitem_quauntity" value=1>
+                <input type="submit" value="add to wishlist">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+  </table>-->
+  {{mess}}
+  {% else %}
+  <p>No items are available.</p>
+  {% endif %}
+
+</div>
+{% endblock content %}
