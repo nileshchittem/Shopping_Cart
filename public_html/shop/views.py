@@ -329,7 +329,7 @@ class register_userView(FormView):
         # Send email with activation key
         email_subject = 'Account confirmation'
         email_body = "Hey %s, thanks for signing up. To activate your account, click this link within \
-        48hours http://127.0.0.1:8000/shop/confirm/%s" % (username, activation_key)
+        48hours http://52.11.241.243/shop/confirm/%s" % (username, activation_key)
 
         send_mail(email_subject, email_body, 'myemail@example.com',
             [email], fail_silently=False)
