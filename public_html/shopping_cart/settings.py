@@ -75,14 +75,16 @@ WSGI_APPLICATION = 'shopping_cart.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
+      'default': {
+             'ENGINE':'django.db.backends.mysql',
+             'NAME': 'cart',
+             'USER': 'admin',
+             'PASSWORD': 'wisecells',
+             'HOST': 'dev-db.cihyato4hhr6.us-west-2.rds.amazonaws.com',
+             'PORT': '3306',
+             }
+          }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

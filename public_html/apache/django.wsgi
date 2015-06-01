@@ -3,9 +3,9 @@ import sys
 #import djcelery
 #djcelery.setup_loader()
 
-path = '/var/www/cart.com/public_html/'
+path = '/home/ubuntu/cart.com/public_html/'
 if path not in sys.path:
-        sys.path.insert(0,'/var/www/cart.com/public_html/')
+        sys.path.insert(0,'/home/ubuntu/cart.com/public_html/')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'shopping_cart.settings'
 

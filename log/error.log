@@ -169,3 +169,21 @@
 [Thu May 21 20:34:33.188780 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]   File "/usr/local/lib/python2.7/dist-packages/django/utils/translation/trans_real.py", line 164, in _add_installed_apps_translations
 [Thu May 21 20:34:33.188802 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877]     "The translation infrastructure cannot be initialized before the "
 [Thu May 21 20:34:33.188835 2015] [wsgi:error] [pid 30126] [client 127.0.0.1:49877] AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[Fri May 29 12:37:15.582934 2015] [authz_core:error] [pid 19009] [client 122.167.255.28:60695] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:18.371726 2015] [authz_core:error] [pid 19009] [client 122.167.255.28:60695] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:20.214459 2015] [authz_core:error] [pid 19009] [client 122.167.255.28:60695] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:25.593957 2015] [authz_core:error] [pid 19008] [client 122.167.255.28:60696] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:27.554244 2015] [authz_core:error] [pid 19008] [client 122.167.255.28:60696] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:44.179067 2015] [authz_core:error] [pid 19011] [client 122.167.255.28:60697] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:49.588269 2015] [authz_core:error] [pid 19012] [client 122.167.255.28:60698] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:53.090682 2015] [authz_core:error] [pid 19012] [client 122.167.255.28:60698] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:55.109117 2015] [authz_core:error] [pid 19012] [client 122.167.255.28:60698] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:37:59.378417 2015] [authz_core:error] [pid 19012] [client 122.167.255.28:60698] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:41:22.717867 2015] [authz_core:error] [pid 19184] [client 122.167.255.28:60720] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:42:09.411613 2015] [authz_core:error] [pid 19263] [client 122.167.255.28:60725] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:45:06.450726 2015] [authz_core:error] [pid 19350] [client 122.167.255.28:60753] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:47:02.855177 2015] [authz_core:error] [pid 19412] [client 122.167.255.28:60767] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 12:59:59.079292 2015] [authz_core:error] [pid 19531] [client 122.167.255.28:60833] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 13:02:29.902419 2015] [authz_core:error] [pid 19587] [client 122.167.255.28:60909] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 13:02:32.201466 2015] [authz_core:error] [pid 19587] [client 122.167.255.28:60909] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
+[Fri May 29 13:07:32.577336 2015] [authz_core:error] [pid 19585] [client 141.212.122.194:12222] AH01630: client denied by server configuration: /home/ubuntu/cart.com/public_html/apache/django.wsgi
